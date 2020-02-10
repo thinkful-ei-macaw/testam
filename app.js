@@ -5,7 +5,7 @@ let myTeam = 'Agatha Muhiddin';
 console.log(myTeam);
 
 function createGreeting(name, age){
-    if (typeof age === 'number' && typeof name === 'string'){
+    if (typeof age !== 'number' || typeof name !== 'string'){
         throw new TypeError("Age must be a number, Name must be a string");
     } 
 
