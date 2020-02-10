@@ -5,11 +5,16 @@ let myTeam = 'Agatha Muhiddin';
 console.log(myTeam);
 
 function createGreeting(name, age){
+    if (typeof age === 'number' && typeof name === 'string'){
+        throw new TypeError("Age must be a number, Name must be a string");
+    } 
+
     const yob = getYearOfBirth(age);
+    
   return `Hi, my name is ${name} and I am ${age} years old. I was born in ${yob}.`;
 }
 
-const greeting1 = createGreeting('Agatha', 20);
+const greeting1 = createGreeting("Muhiddin", "twenty nine");
 console.log(greeting1);
 
 function getYearOfBirth(age) {
@@ -26,3 +31,4 @@ function getYearOfBirth(age) {
   console.log(e.message + "!!!!");
 }
     
+
