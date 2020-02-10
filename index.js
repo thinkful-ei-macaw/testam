@@ -85,3 +85,23 @@ function howMany(month, year){
 }
 
 console.log(howMany('February', 2020));
+
+// 5 Rock Paper Scissors
+function playGame(num) {
+  if(num < 1 || num > 3) {
+    throw new Error('invalid number!');
+  } else {
+  const randomNo = Math.floor(Math.random() * 3) + 1;
+  if(num === randomNo) {
+    console.log('Tie');
+  } else if(num === 1 && randomNo == 3 || num === 2 && randomNo === 1 || num === 3 && randomNo === 2) {
+    console.log('Player wins!');
+  }  else {
+    console.log('Computer wins!');
+  }
+ }
+}
+
+playGame(3);
+
+playGame(-5);
