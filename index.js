@@ -1,3 +1,4 @@
+'use strict';
 // 1
 function jediName(firstName, lastName) {
   return lastName.slice(0, 3) + firstName.slice(0, 2);
@@ -54,7 +55,7 @@ function howMany(month, year){
   if ((year % 4 == 0 && year % 100 != 0 || year % 400 == 0)){
     result += 'February has 29 days';
   } else {
-  switch(month){
+    switch(month){
     case 'January': result += 'January has 31 days';
       break;
     case 'February': result += 'February has 28 days';
@@ -91,15 +92,15 @@ function playGame(num) {
   if(num < 1 || num > 3) {
     throw new Error('invalid number!');
   } else {
-  const randomNo = Math.floor(Math.random() * 3) + 1;
-  if(num === randomNo) {
-    console.log('Tie');
-  } else if(num === 1 && randomNo == 3 || num === 2 && randomNo === 1 || num === 3 && randomNo === 2) {
-    console.log('Player wins!');
-  }  else {
-    console.log('Computer wins!');
+    const randomNo = Math.floor(Math.random() * 3) + 1;
+    if(num === randomNo) {
+      console.log('Tie');
+    } else if(num === 1 && randomNo == 3 || num === 2 && randomNo === 1 || num === 3 && randomNo === 2) {
+      console.log('Player wins!');
+    }  else {
+      console.log('Computer wins!');
+    }
   }
- }
 }
 
 playGame(3);
