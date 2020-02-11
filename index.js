@@ -52,7 +52,7 @@ console.log(decode('craft block argon meter bells brown croon droop'));
 function howMany(month, year){
   let result = '';
 
-  if ((year % 4 == 0 && year % 100 != 0 || year % 400 == 0)){
+  if ((year % 4 === 0 && year % 100 !== 0 || year % 400 === 0)){
     result += 'February has 29 days';
   } else {
     switch(month){
@@ -82,7 +82,7 @@ function howMany(month, year){
       break;
     }
   }
-  return result
+  return result;
 }
 
 console.log(howMany('February', 2020));
@@ -95,7 +95,7 @@ function playGame(num) {
     const randomNo = Math.floor(Math.random() * 3) + 1;
     if(num === randomNo) {
       console.log('Tie');
-    } else if(num === 1 && randomNo == 3 || num === 2 && randomNo === 1 || num === 3 && randomNo === 2) {
+    } else if(num === 1 && randomNo === 3 || num === 2 && randomNo === 1 || num === 3 && randomNo === 2) {
       console.log('Player wins!');
     }  else {
       console.log('Computer wins!');
